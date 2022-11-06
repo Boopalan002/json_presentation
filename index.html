@@ -1,0 +1,483 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>JSON :: SB</title>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/moon.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1 class="r-fit-text">An Introduction to JSON</h1>
+					<p>Boopalan Sundaramoorthy</p>
+				</section>
+				<section data-transition="convex">
+					<h2>Contents</h2>
+					<ul>
+						<li>JSON Overview</li>
+						<li>JSON Syntax</li>
+						<li>JSON DataTypes</li>
+						<li>JSON Objects</li>
+						<li>JSON Comparison with XML</li>
+						<li>JSON with PHP</li>
+						<li>JSON with AJAX</li>
+					</ul>
+				</section>
+				<section data-transition="convex">
+					<h2>JSON Overview</h2>
+					<section>JSON or JavaScript Object Notation is a lightweight text-based open standard designed for human-readable data interchange. Conventions used by JSON are known to programmers, which include C, C++, Java, Python, Perl, etc.</section>
+					<section>
+						<ul>
+							<li>JSON stands for JavaScript Object Notation.</li>
+							<li>The format was specified by Douglas Crockford.</li>
+							<li>It was designed for human-readable data interchange.</li>
+							<li>It has been extended from the JavaScript scripting language.</li>
+							<li>The filename extension is .json.</li>
+							<li>JSON Internet Media type is application/json.</li>
+							<li>The Uniform Type Identifier is public.json.</li>
+						</ul>
+					</section>
+					<section>
+						<h4 style="text-align:left;">Uses of JSON</h4>
+						<ul>
+							<li>It is used while writing JavaScript based applications that includes browser extensions and websites.</li>
+							<li>JSON format is used for serializing and transmitting structured data over network connection.</li>
+							<li>It is primarily used to transmit data between a server and web applications.</li>
+							<li>Web services and APIs use JSON format to provide public data.</li>
+							<li>It can be used with modern programming languages.</li>
+						</ul>
+					</section>
+					<section>
+						<h4 style="text-align:left;">Characteristics of JSON</h4>
+						<ul>
+							<li>JSON is easy to read and write.</li>
+							<li>It is a lightweight text-based interchange format.</li>
+							<li>JSON is language independent.</li>
+						</ul>
+					</section>
+					<section>
+						<h4 style="text-align:left;">Simple Example</h4>
+						<img src="images/book.jpg"/>
+					</section>
+					<section>
+						<div class="r-stack">
+							<img class="fragment fade-out" data-fragment-index="0" src="images/json1.jpg">
+							<img class="fragment current-visible" data-fragment-index="0" src="images/json1out.jpg">
+						  </div>
+					</section>
+				</section>
+				<section data-transition="convex">
+					<h2>JSON Syntax</h2>
+					<section>
+						JSON syntax is basically considered as a subset of JavaScript syntax; it includes the following −
+					</section>
+					<section>
+						<ul>
+							<li>Data is represented in name/value pairs.</li>
+							<li>Curly braces hold objects and each name is followed by ':'(colon), the name/value pairs are separated by , (comma).</li>
+							<li>Square brackets hold arrays and values are separated by ,(comma).</li>
+						</ul>
+					</section>
+					<section>
+						<p style="text-align:left;font-size:32px;">JSON supports the following two data structures :</p>
+						<ul>
+							<li>Collection of name/value pairs : This Data Structure is supported by different programming languages.</li>
+							<li>Ordered list of values : It includes array, list, vector or sequence etc.</li>
+						</ul>
+					</section>
+				</section>
+				<section data-transition="convex">
+					<h2>JSON DataTypes</h2>
+					<section>
+						<p style="text-align:left;font-size:32px;">JSON format supports the following data types :</p>
+						<table>
+							<thead><tr>
+								<th>S.No</th>
+								<th>Type & Description</th>
+							</tr></thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>Number (double- precision floating-point format in JavaScript)</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>String (double-quoted Unicode with backslash escaping)</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Boolean (true or false)</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>Array (an ordered sequence of values)</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>Value (it can be a string, a number, true or false, null etc)</td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td>Object (an unordered collection of key:value pairs)</td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td>Whitespace (can be used between any pair of tokens)</td>
+								</tr>
+								<tr>
+									<td>8</td>
+									<td>null (empty)</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<p style="text-align:left;">Number</p>
+						<ul>
+							<li>It is a double precision floating-point format in JavaScript and it depends on implementation.</li>
+							<li>Octal and hexadecimal formats are not used.</li>
+							<li>No NaN or Infinity is used in Number.</li>
+							<li>Integer: Digits 1-9, 0 and positive or negative</li>
+							<li>Fraction: Fractions like .3, .9</li>
+							<li>Exponent: Exponent like e, e+, e-, E, E+, E-</li>
+							<li>Syntax:
+								<pre><code data-trim data-noescape>
+									var json-object-name = { string : number_value, .......}
+									</code>
+								</pre>
+							</li>
+							<li>Example: 
+								<pre>
+									<code data-trim data-noescape>
+									var obj = {marks: 97}
+									</code>
+								</pre>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<p style="text-align:left;">String</p>
+						<ul>
+							<li>It is a sequence of zero or more double quoted Unicode characters with backslash escaping.</li>
+							<li>Character is a single character string i.e. a string with length 1.</li>
+							<li>Syntax:
+								<pre><code data-trim data-noescape>
+									var json-object-name = { string : "string value", .......}
+								</code></pre>
+							</li>
+							<li>Example: 
+								<pre><code data-trim data-noescape>
+									var obj = {name: 'Amit'}
+								</code></pre>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<p style="text-align:left;">Boolean</p>
+						<ul>
+							<li>Syntax: 
+								<pre><code data-trim data-noescape>
+									var json-object-name = { string : true/false, .......}
+								</code></pre>
+							</li>
+							<li>Example: 
+								<pre><code data-trim data-noescape>
+								var obj = {name: 'Amit', marks: 97, distinction: true}
+								</code></pre>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<p style="text-align:left;">Array</p>
+						<ul>
+							<li>It is an ordered collection of values.</li>
+							<li>These are enclosed in square brackets which means that array begins with .[. and ends with .]..</li>
+							<li>The values are separated by , (comma).</li>
+							<li>Array indexing can be started at 0 or 1.</li>
+							<li>Arrays should be used when the key names are sequential integers.</li>
+							<li>Syntax: 
+								<pre><code data-trim data-noescape>
+									[ value, .......]
+								</code></pre>
+							</li>
+							<li>Example: 
+								<pre><code data-trim data-noescape>
+								{
+									"books": [
+								   { "language":"Java" , "edition":"second" },
+								   { "language":"C++" , "lastName":"fifth" },
+								   { "language":"C" , "lastName":"third" }
+									]
+							 	}
+							</code></pre>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<p style="text-align:left;">Object</p>
+						<ul>
+							<li>It is an unordered set of name/value pairs.</li>
+							<li>Objects are enclosed in curly braces that is, it starts with '{' and ends with '}'.</li>
+							<li>Each name is followed by ':'(colon) and the key/value pairs are separated by , (comma).</li>
+							<li>The keys must be strings and should be different from each other.</li>
+							<li>Objects should be used when the key names are arbitrary strings.</li>
+							<li>Syntax: 
+								<pre><code data-trim data-noescape>
+								{ string : value, .......}
+								</code></pre>
+							</li>
+							<li>Example: 
+								<pre><code data-trim data-noescape>
+								{
+								"id": "011A",
+								"language": "JAVA",
+								"price": 500,
+								}
+								</code></pre>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<p style="text-align:left;">Whitespace</p>
+						<ul>
+							<li>It can be inserted between any pair of tokens. It can be added to make a code more readable. Example shows declaration with and without whitespace</li>
+							<li>Syntax: 
+								<pre><code data-trim data-noescape>
+									{string:" ",....}
+								</code></pre>
+							</li>
+							<li>Example: 
+								<pre><code data-trim data-noescape>
+								var obj1 = {"name": "Sachin Tendulkar"}
+								var obj2 = {"name": "SauravGanguly"}
+								</code></pre>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<p style="text-align:left;">null</p>
+						<ul>
+							<li>It means empty type.</li>
+							<li>Syntax: 
+								<pre><code data-trim data-noescape>
+								null
+								</code></pre>
+							</li>
+							<li>Example: 
+								<pre><code data-trim data-noescape>
+								var i = null;
+								if(i == 1) 
+								{
+								   document.write("<p>value is 1</p>");
+								} else {
+									document.write("<p>value is null</p>");
+							}</code></pre>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section data-transition="convex">
+					<h2>JSON Objects</h2>
+					<section>
+					<p style="text-align:left;">Creating Simple Objects</p>
+						<ul>
+							<li>JSON objects can be created with JavaScript. Let us see the various ways of creating JSON objects using JavaScript:</li>
+							<li>Creation of an empty Object: 
+								<pre><code data-trim data-noescape>
+								var JSONObj = {};
+								</code></pre>
+							</li>
+							<li>Creation of a new Object: 
+								<pre><code data-trim data-noescape>
+								var JSONObj = new Object();
+								</code></pre>
+							</li>
+							<li>Creation of an object with attribute bookname with value in string, attribute price with numeric value. Attribute is accessed by using '.' Operator: var JSONObj = { "bookname ":"VB BLACK BOOK", "price":500 };</li>
+						</ul>
+					</section>
+					<section>
+						<p style="text-align:left;font-size:30px;">Creating Simple Objects</p>
+						<div class="r-stack">
+							<img class="fragment fade-out" data-fragment-index="0" src="images/json2.jpg">
+							<img class="fragment current-visible" data-fragment-index="0" src="images/json2out.jpg">
+						</div>
+					</section>
+					<section>
+						<p style="text-align:left;font-size:30px;">Creating Array Objects</p>
+							<div class="r-stack">
+								<img class="fragment fade-out" data-fragment-index="0" src="images/json3(1).jpg">
+								<img class="fragment current-visible" data-fragment-index="0" src="images/json3(2).jpg">
+								<img class="fragment" src="images/json3out.jpg">
+							</div>
+					</section>
+				</section>
+				<section data-transition="convex">
+					<h2>JSON Comparison with XML</h2>
+					<section>
+						<p style="text-align:left;font-size:30px;">JSON and XML are human readable formats and are language independent. They both have support for creation, reading and decoding in real world situations. We can compare JSON with XML, based on the following factors:</p>
+						<h5 style="text-align:left;">Verbose</h5>
+						<p style="text-align:left;font-size:30px;">XML is more verbose than JSON, so it is faster to write JSON for programmers.</p>
+					</section>
+					<section>
+						<h5 style="text-align:left;">Arrays Usage</h5>
+						<p style="text-align:left;font-size:30px;">XML is used to describe the structured data, which doesn't include arrays whereas JSON include arrays.</p>
+					</section>
+					<section>
+						<h5 style="text-align:left;">Parsing</h5>
+						<p style="text-align:left;font-size:30px;">JavaScript's eval method parses JSON. When applied to JSON, eval returns the described object.</p>
+					</section>
+					<section>
+						<h5 style="text-align:left;">Example</h5>
+						<img data-fragment-index="0" src="images/json4.jpg">
+					</section>
+				</section>
+				<section data-transition="convex">
+					<h2>JSON with PHP</h2>
+					<section>
+						<h5 style="text-align:left;">Environment</h5>
+						<p style="text-align:left;font-size:30px;">As of PHP 5.2.0, the JSON extension is bundled and compiled into PHP by default.</p>
+					</section>
+					<section>
+						<h5 style="text-align:left;">JSON Functions</h5>
+						<table>
+							<thead><tr>
+								<th>Function</th>
+								<th>Libraries</th>
+							</tr></thead>
+							<tbody>
+								<tr>
+									<td>json_encode</td>
+									<td>Returns the JSON representation of a value.</td>
+								</tr>
+								<tr>
+									<td>json_decode</td>
+									<td>Decodes a JSON string.</td>
+								</tr>
+								<tr>
+									<td>json_last_error</td>
+									<td>Returns the last error occurred.</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h5 style="text-align:left;">Encoding JSON in PHP (json_encode)</h5>
+						<p style="text-align:left;font-size:30px;">PHP json_encode() function is used for encoding JSON in PHP. This function returns the JSON representation of a value on success or FALSE on failure.</p>
+						<ul>
+							<li>Syntax: 
+								<pre><code data-trim data-noescape>
+								string json_encode ( $value [, $options = 0 ] )
+								</code></pre>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h5 style="text-align:left;">Encoding JSON in PHP (json_encode)</h5>
+						<ul>
+							<li>Parameters:
+								<ol>
+									<li>value : The value being encoded. This function only works with UTF-8 encoded data.</li>
+									<li>options:  This optional value is a bitmask consisting of JSON_HEX_QUOT, JSON_HEX_TAG, JSON_HEX_AMP, JSON_HEX_APOS, JSON_NUMERIC_CHECK, JSON_PRETTY_PRINT, JSON_UNESCAPED_SLASHES, JSON_FORCE_OBJECT.</li>
+								</ol>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h5 style="text-align:left;">Example 1:</h5>
+						<img data-fragment-index="0" src="images/json5.jpg">
+					</section>
+					<section>
+						<h5 style="text-align:left;">Example 2:</h5>
+						<img data-fragment-index="0" src="images/json6.jpg">
+					</section>
+					<section>
+						<h5 style="text-align:left;">Decoding JSON in PHP (json_encode)</h5>
+						<p style="text-align:left;font-size:30px;">PHP json_decode() function is used for decoding JSON in PHP. This function returns the value decoded from json to appropriate PHP type.</p>
+						<ul>
+							<li>Syntax: 
+								<pre><code data-trim data-noescape>
+								mixed json_decode ($json [,$assoc = false [, $depth = 512 [, $options = 0 ]]])
+								</code></pre>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h5 style="text-align:left;">Encoding JSON in PHP (json_encode)</h5>
+						<ul>
+							<li>Parameters:
+								<ol>
+									<li>json_string : It is an encoded string which must be UTF-8 encoded data.</li>
+									<li>assoc : It is a boolean type parameter, when set to TRUE, returned objects will be converted into associative arrays.</li>
+									<li>depth : It is an integer type parameter which specifies recursion depth</li>
+									<li>options : It is an integer type bitmask of JSON decode, JSON_BIGINT_AS_STRING is supported.</li>
+								</ol>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h5 style="text-align:left;">Example:</h5>
+						<img data-fragment-index="0" src="images/json7.jpg">
+					</section>
+				</section>
+				<section data-transition="convex">
+					<h2>JSON with AJAX</h2>
+					<section>
+						<ul>
+							<li>AJAX is Asynchronous JavaScript and XML, which is used on the client side as a group of interrelated web development techniques, in order to create asynchronous web applications.</li>
+							<li>According to the AJAX model, web applications can send and retrieve data from a server asynchronously without interfering with the display and the behavior of the existing page.</li>
+							<li>Many developers use JSON to pass AJAX updates between the client and the server. </li>
+							<li>Websites updating live sports scores can be considered as an example of AJAX. If these scores have to be updated on the website, then they must be stored on the server so that the webpage can retrieve the score when it is required. This is where we can make use of JSON formatted data.</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li>Store the parsed values in the variables for further processing before displaying them on the webpage.</li>
+							<li>It directly assigns the data to the DOM elements in the webpage, so that they are displayed on the website.</li>
+						</ul>
+					</section>
+					<section>
+						<h5 style="text-align:left;">Example</h5>
+							<div class="r-stack">
+								<img class="fragment fade-out" data-fragment-index="0" src="images/json8(1).jpg" >
+								<img class="fragment current-visible" data-fragment-index="0" src="images/json8(2).jpg">
+								<img class="fragment current-visible" data-fragment-index="1" src="images/json8(3).jpg">
+								<img class="fragment current-visible" data-fragment-index="2" src="images/json8(4).jpg">
+								<img class="fragment" src="images/json8out.jpg">
+							</div>
+					</section>
+				</section>
+				<section>
+					<h2 class="r-fit-text">THANK YOU</h2>
+					<a href="#/0">Back to the first slide</a>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: true,
+				parallaxBackgroundImage: 'https://wallpaperaccess.com/full/619880.jpg',
+				parallaxBackgroundSize: '1100px500px',
+				parallaxBackgroundHorizontal: 200,
+  				parallaxBackgroundVertical: 50,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
